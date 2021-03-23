@@ -13,7 +13,7 @@ pipeline {
       stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("febysaputra/nodejs-docker:latest")
+                    myapp = docker.build("febysaputra/nodejs-docker:${env.BUILD_ID}")
                 }
             }
         }
